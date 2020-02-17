@@ -1,0 +1,19 @@
+body {
+  font-family: 'Open Sans Condensed';
+  background-color: #fdfdfd;
+  
+  .container {
+    padding: 10px 40px;
+    width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}

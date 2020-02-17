@@ -1,0 +1,26 @@
+header {
+  width: 100%;
+  background-color: #0E283A;
+  //#0E283A #2E919B #BAD0C8 #FEFEFD #E33C0E
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    height: 55px;
+
+    a {
+      padding: 15px 15px;
+      color: #FEFEFD;
+
+      &:hover {
+        background-color: #2d4352
+      }
+
+      &.active {
+        background-color: #2d4352
+      }
+    }
+  }
+}
