@@ -1,0 +1,136 @@
+{
+  "success": true,
+  "data": {
+    "id": 1,
+    "title": "New Super puper test",
+    "time": 60,
+    "questions": [
+      {
+        "id": 1,
+        "type": 1,
+        "text": "Quesition 1. One Answer",
+        "varaiants": [
+          {
+            "id": 10,
+            "text": "Variant 1"
+          },
+          {
+            "id": 11,
+            "text": "Variant 2"
+          },
+          {
+            "id": 12,
+            "text": "Variant 3"
+          },
+          {
+            "id": 13,
+            "text": "Variant 4"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "type": 2,
+        "text": "Quesition 2. Several Answers",
+        "varaiants": [
+          {
+            "id": 14,
+            "text": "Variant 1"
+          },
+          {
+            "id": 15,
+            "text": "Variant 2"
+          },
+          {
+            "id": 16,
+            "text": "Variant 3"
+          },
+          {
+            "id": 17,
+            "text": "Variant 4"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "type": 3,
+        "text": "Quesition 3. Put a text"
+      },
+      {
+        "id": 4,
+        "type": 4,
+        "text": "Quesition 4. Write essay"
+      },
+      {
+        "id": 5,
+        "type": 5,
+        "text": "Quesition 5. Restore order",
+        "varaiants": [
+          {
+            "id": 18,
+            "text": "Variant 1"
+          },
+          {
+            "id": 19,
+            "text": "Variant 2"
+          },
+          {
+            "id": 20,
+            "text": "Variant 3"
+          },
+          {
+            "id": 21,
+            "text": "Variant 4"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "type": 6,
+        "text": "Quesition 6. Pair sides",
+        "varaiants": [
+          {
+            "id": 22,
+            "side": 1,
+            "text": "Variant 1"
+          },
+          {
+            "id": 23,
+            "side": 1,
+            "text": "Variant 2"
+          },
+          {
+            "id": 24,
+            "side": 1,
+            "text": "Variant 3"
+          },
+          {
+            "id": 25,
+            "side": 1,
+            "text": "Variant 4"
+          },
+          {
+            "id": 26,
+            "side": 2,
+            "text": "Variant 5"
+          },
+          {
+            "id": 27,
+            "side": 2,
+            "text": "Variant 6"
+          },
+          {
+            "id": 28,
+            "side": 2,
+            "text": "Variant 7"
+          },
+          {
+            "id": 29,
+            "side": 2,
+            "text": "Variant 8"
+          }
+        ]
+      }
+    ]
+  }
+}

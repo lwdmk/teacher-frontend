@@ -1,11 +1,14 @@
 body {
-  font-family: 'Open Sans Condensed';
-  background-color: #fdfdfd;
+  font-family: 'Fira Sans', sans-serif;
   
   .container {
-    padding: 10px 40px;
-    width: 1024px;
+    padding: 0px 40px;
     margin: 0 auto;
+    
+  }
+  .content {
+    padding: 10px;
+    background-color: #fdfdfd;
   }
 }
 
@@ -16,4 +19,17 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  body {
+    .container {
+      padding: 0 10px;
+    }
+    .content {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
 }

@@ -1,0 +1,7 @@
+const ExamActionTypes = {
+  FETCH_EXAM_START: 'FETCH_EXAM_START',
+  FETCH_EXAM_SUCCESS: 'FETCH_EXAM_SUCCESS',
+  FETCH_EXAM_FAILURE: 'FETCH_EXAM_FAILURE'
+}
+
+export default ExamActionTypes;

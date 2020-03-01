@@ -1,0 +1,45 @@
+.sub-header {
+  display: flex;
+  background-size: cover;
+  .sub-header_images {
+    width: 70vw;
+    height: 200px;
+  }
+  .sub-header_about {
+    width: 25vw;
+    flex-direction: column;
+    justify-content: baseline;
+    display: flex;
+    align-items: center;
+    padding: 15px;
+
+    .position {
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .name {
+      margin-bottom: 5px;
+      text-align: center;
+    }
+
+    .photo {
+      img {
+        width:100px;
+        height: 100px;
+        border-radius: 100px;
+        box-shadow: 0 0 0 3px #e6e6e6;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .sub-header {
+    background-size: auto;
+
+    .sub-header_about {
+      width:100%;
+    }
+  }
+}

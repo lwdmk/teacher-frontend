@@ -1,0 +1,19 @@
+.homepage-blocks {
+  display: flex;
+  flex-direction: row;
+
+  .block {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .homepage-blocks {
+    display: flex;
+    flex-direction: column;
+
+    .block {
+      margin: 0;
+    }
+  }
+}
