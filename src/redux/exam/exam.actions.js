@@ -1,15 +1,19 @@
 import ExamActionTypes from './exam.types';
 
-export const fetchExamStart = () => ({
-  type: ExamActionTypes.FETCH_EXAM_START
+export const fetchFullExamStart = () => ({
+  type: ExamActionTypes.FETCH_FULL_EXAM_START
 });
 
-export const fetchExamSuccess = collectionsMap => ({
-  type: ExamActionTypes.FETCH_EXAM_SUCCESS,
-  payload: collectionsMap
+export const fetchExamsListStart = () => ({
+  type: ExamActionTypes.FETCH_EXAMS_LIST_START
 });
 
-export const fetchExamFailure = errorMessage => ({
-  type: ExamActionTypes.FETCH_EXAM_FAILURE,
+export const fetchExamsListSuccess = exams => ({
+  type: ExamActionTypes.FETCH_EXAMS_LIST_SUCCESS,
+  payload: exams
+});
+
+export const fetchExamsListFailure = errorMessage => ({
+  type: ExamActionTypes.FETCH_EXAMS_LIST_FAILURE,
   payload: errorMessage
 });

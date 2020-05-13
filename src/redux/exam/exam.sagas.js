@@ -1,25 +1,26 @@
 import { takeLatest, put } from 'redux-saga/effects';
 import {
-  fetchExamSuccess,
-  fetchExamFailure
+  fetchExamsListSuccess,
+  fetchExamsListFailure
 } from './exam.actions';
 
-import result from '../../mocks/test.mock.json';
-
+import { fetchExamsList } from '../../api/exams.api'
 import ExamActionTypes from './exam.types';
 
-export function* fetchExam() {
+export function* fetchExamsListAsync() {
   try {
-    if (result.success) {
-      yield put(fetchExamSuccess(result.data));
+    let response = yield fetchExamsList();
+    if (response.status === 200) {
+      let result = yield response.json();
+      yield put(fetchExamsListSuccess(result.data));
     } else {
-      yield put(fetchExamFailure(result.message));
+      yield put(fetchExamsListFailure('Failed to get exams from remote server'));
     }
   } catch (error) {
-    yield put(fetchExamFailure(error.message));
+    yield put(fetchExamsListFailure(error.message));
   }
 }
 
-export function* onFetchExamStart() {
-  yield takeLatest(ExamActionTypes.FETCH_EXAM_START, fetchExam);
+export function* onFetchExamsListStart() {
+  yield takeLatest(ExamActionTypes.FETCH_EXAMS_LIST_START, fetchExamsListAsync);
 }

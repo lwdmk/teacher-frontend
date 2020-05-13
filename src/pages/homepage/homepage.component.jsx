@@ -1,72 +1,31 @@
 import React from 'react'
-import SubHeader from '../../component/sub-header/sub-header.component';
+import SubHeader from '../../component/sub-header/sub-header.component'
+import BlockList from '../../component/block-list/block-list.component'
+import { selectLessonsRange } from '../../redux/lesson/lesson.selectors'
+import { selectExamsRange } from '../../redux/exam/exam.selectors'
+
+import { connect } from 'react-redux';
 
 import './homepage.styles.scss';
 
-const HomePage = () => (
-  <React.Fragment>
-    <SubHeader />
-    <div class='homepage-blocks'>
-      <div class='block'>
-        <h2>Последнение добавленные материалы</h2>
-        <div className='last-articles'>
-          <div className='article-preview'>
-            <div className='article-title'>
-              Подготовка к ЕГЭ 2020
-        </div>
-            <div className='article-short'>Материал содержит решение части А и В</div>
-          </div>
-          <div className='article-preview'>
-            <div className='article-title'>
-              Подготовка к ЕГЭ 2020
-        </div>
-            <div className='article-short'>Материал содержит решение части А и В</div>
-          </div>
-          <div className='article-preview'>
-            <div className='article-title'>
-              Подготовка к ЕГЭ 2020
-        </div>
-            <div className='article-short'>Материал содержит решение части А и В</div>
-          </div>
-          <div className='article-preview'>
-            <div className='article-title'>
-              Подготовка к ЕГЭ 2020
-        </div>
-            <div className='article-short'>Материал содержит решение части А и В</div>
-          </div>
-        </div>
+const HomePage = ({ lastLessons, lastExams }) => {
+  console.log(lastLessons, lastExams);
+  return (
+    <React.Fragment>
+      <SubHeader />
+      <div className='homepage-blocks'>
+        <BlockList title="Последние добавленные материалы" limit={3} blocks={lastLessons} />
+        <BlockList title="Последние добавленные материалы" limit={3} blocks={lastExams} />
       </div>
-      <div class='block'>
-        <h2>Последнение добавленные тесты</h2>
-        <div className='last-articles'>
-          <div className='article-preview'>
-            <div className='article-title'>
-              Подготовка к ЕГЭ 2020
-        </div>
-            <div className='article-short'>Материал содержит решение части А и В</div>
-          </div>
-          <div className='article-preview'>
-            <div className='article-title'>
-              Подготовка к ЕГЭ 2020
-        </div>
-            <div className='article-short'>Материал содержит решение части А и В</div>
-          </div>
-          <div className='article-preview'>
-            <div className='article-title'>
-              Подготовка к ЕГЭ 2020
-        </div>
-            <div className='article-short'>Материал содержит решение части А и В</div>
-          </div>
-          <div className='article-preview'>
-            <div className='article-title'>
-              Подготовка к ЕГЭ 2020
-        </div>
-            <div className='article-short'>Материал содержит решение части А и В</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </React.Fragment>
-)
+    </React.Fragment>
+  );
+}
 
-export default HomePage;
+const mapStateToProps = state => {
+  return {
+    lastLessons: selectLessonsRange(0, 3)(state),
+    lastExams: selectExamsRange(0, 3)(state)
+  }
+}
+
+export default connect(mapStateToProps)(HomePage);

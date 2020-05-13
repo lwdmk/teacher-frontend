@@ -1,17 +1,13 @@
-import {combineReducers} from 'redux';
-import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/lib/storage';
+import { combineReducers } from 'redux';
 
 import examReducer from './exam/exam.reducer'
+import lessonReducer from './lesson/lesson.reducer'
 
-const persistConfig = {
-  key: 'root',
-  storage,
-  whitelist: ['cart']
-};
+
 
 const rootReducer = combineReducers({
-  exam: examReducer
+  exam: examReducer,
+  lesson: lessonReducer
 });
 
-export default persistReducer(persistConfig, rootReducer);
+export default rootReducer;

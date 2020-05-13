@@ -1,29 +1,29 @@
 import ExamActionTypes from './exam.types';
 
 const INITIAL_STATE = {
-  fullTest: null,
-  isFetching: false,
+  examsList: [], 
+  isExamsListFetching: false,
   errorMessage: null
 }
 
 const examReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case ExamActionTypes.FETCH_EXAM_START:
+    case ExamActionTypes.FETCH_EXAMS_LIST_START:
       return {
         ...state,
-        isFetching: true
+        isExamsListFetching: true
       };
-    case ExamActionTypes.FETCH_EXAM_SUCCESS:
+    case ExamActionTypes.FETCH_EXAMS_LIST_SUCCESS:
       return {
         ...state,
-        isFetching: false,
-        fullTest: action.payload,
+        isExamsListFetching: false,
+        examsList: action.payload ,
         errorMessage: null
       };
-    case ExamActionTypes.FETCH_EXAM_FAILURE:
+    case ExamActionTypes.FETCH_EXAMS_LIST_FAILURE:
       return {
         ...state,
-        isFetching: false,
+        isExamsListFetching: false,
         errorMessage: action.payload
       };
     default:

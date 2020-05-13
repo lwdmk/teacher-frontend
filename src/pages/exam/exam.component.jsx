@@ -1,18 +1,18 @@
 import React, { useEffect } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { fetchExamStart } from '../../redux/exam/exam.actions'
+import { fetchFullExamStart } from '../../redux/exam/exam.actions'
 
 import ExamResultPage from '../exam-result/exam-result.component';
 import Exam from '../../component/exam/exam.component';
 
 import './exam.styles.scss';
 
-const ExamPage = ({ match, fetchExamStart }) => {
+const ExamPage = ({ match, fetchFullExamStart }) => {
 
   useEffect(() => {
-    fetchExamStart()
-  }, [fetchExamStart]);
+    fetchFullExamStart()
+  }, [fetchFullExamStart]);
 
   return (
     <div className='exam-page'>
@@ -26,7 +26,7 @@ const ExamPage = ({ match, fetchExamStart }) => {
 }
 
 const mapDispatchToProps = dispatch => ({
-  fetchExamStart: () => dispatch(fetchExamStart())
+  fetchFullExamStart: () => dispatch(fetchFullExamStart())
 });
 
 export default connect(
