@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 }
 
 const LessonReducer = (state = INITIAL_STATE, action) => {
-  switch (action) {
+  switch (action.type) {
     case LessonActionTypes.FETCH_LESSON_LIST_START:
       return {
         ...state,

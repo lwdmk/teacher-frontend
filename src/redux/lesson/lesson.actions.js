@@ -4,7 +4,7 @@ export const fetchLessonsListStart = () => ({
   type: LessonActionTypes.FETCH_LESSON_LIST_START
 });
 
-export const fetchLessonsListSuccess = (lessons) => ({
+export const fetchLessonsListSuccess = lessons => ({
   type: LessonActionTypes.FETCH_LESSON_LIST_SUCCESS,
   payload: lessons
 })

@@ -1,6 +1,6 @@
-const GET_LIST_URL = '/tests';
+const GET_LIST_URL = '/lessons';
 
-export const fetchExamsList = (offset = 0, limit = 20) => {
+export const fetchLessonsList = (offset = 0, limit = 20) => {
   return new Promise((resolve, reject) => (setTimeout(() => {
     resolve(
       {
@@ -10,27 +10,27 @@ export const fetchExamsList = (offset = 0, limit = 20) => {
             data: [
               {
                 id: 1,
-                title: 'EXAM. How To Take The Headache Out Of TITLE',
+                title: 'LESSON. How To Take The Headache Out Of TITLE',
                 short: 'С другой стороны дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
               },
               {
                 id: 2,
-                title: 'EXAM. 3 Ways Twitter Destroyed My TITLE Without Me Noticing',
+                title: 'LESSON. 3 Ways Twitter Destroyed My TITLE Without Me Noticing',
                 short: 'С другой стороны дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
               },
               {
                 id: 3,
-                title: 'EXAM. To People That Want To Start TITLE But Are Affraid To Get Started',
+                title: 'LESSON. To People That Want To Start TITLE But Are Affraid To Get Started',
                 short: 'С другой стороны дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
               },
               {
                 id: 4,
-                title: 'EXAM. Boost Your TITLE With These Tips',
+                title: 'LESSON. Boost Your TITLE With These Tips',
                 short: 'С другой стороны дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
               },
               {
                 id: 5,
-                title: 'EXAM. How To Turn Your TITLE From Zero To Hero',
+                title: 'LESSON. How To Turn Your TITLE From Zero To Hero',
                 short: 'С другой стороны дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке направлений прогрессивного развития.'
               },
             ]

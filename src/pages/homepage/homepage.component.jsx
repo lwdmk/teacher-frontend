@@ -9,7 +9,6 @@ import { connect } from 'react-redux';
 import './homepage.styles.scss';
 
 const HomePage = ({ lastLessons, lastExams }) => {
-  console.log(lastLessons, lastExams);
   return (
     <React.Fragment>
       <SubHeader />

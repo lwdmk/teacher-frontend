@@ -17,7 +17,7 @@ const examReducer = (state = INITIAL_STATE, action) => {
       return {
         ...state,
         isExamsListFetching: false,
-        examsList: action.payload ,
+        examsList: action.payload,
         errorMessage: null
       };
     case ExamActionTypes.FETCH_EXAMS_LIST_FAILURE:

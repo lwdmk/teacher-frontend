@@ -3,17 +3,19 @@ import { connect } from 'react-redux'
 import { Switch, Route } from 'react-router-dom';
 
 import { fetchExamsListStart } from './redux/exam/exam.actions'
+import { fetchLessonsListStart } from './redux/lesson/lesson.actions'
 
 import Header from './component/header/header.component';
 import HomePage from './pages/homepage/homepage.component';
 import ListPage from './pages/list/list.component';
 import './App.scss';
 
-const App = ({ fetchExamsList }) => {
+const App = ({ fetchExamsList, fetchLessonsList }) => {
 
   useEffect(() => {
-    fetchExamsList()
-  }, [fetchExamsList])
+    fetchExamsList();
+    fetchLessonsList();
+  }, [fetchExamsList, fetchLessonsList])
 
   return (
     <React.Fragment>
@@ -31,7 +33,8 @@ const App = ({ fetchExamsList }) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchExamsList: () => dispatch(fetchExamsListStart())
+  fetchExamsList: () => dispatch(fetchExamsListStart()),
+  fetchLessonsList: () => dispatch(fetchLessonsListStart())
 })
 
 export default connect(null, mapDispatchToProps)(App);
